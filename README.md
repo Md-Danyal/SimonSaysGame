@@ -39,4 +39,4 @@ Want to improve the game? Fork the repo and submit a pull request!
 
 📬 Contact
 📧 Email: themddanyal@gmail.com
-🔗 LinkedIn: https://in.linkedin.com/in/md-danyal-27996a1a0?trk=people-guest_people_search-card
+🔗 LinkedIn: [Md Danyal](https://in.linkedin.com/in/md-danyal-27996a1a0?trk=people-guest_people_search-card)
