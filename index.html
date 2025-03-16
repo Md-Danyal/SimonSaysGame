@@ -7,11 +7,15 @@
     <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
     <title>Symon Says Game</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Emblema+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <h1>Simon says game</h1>
-    <h2>Press any key to start the game</h2>
+    <h2>Press any keyboard key or "Start" below to start the game.</h2>
+    <button class="start">Start</button>
     <div class="btn-container">
         <div class="line-one">
             <div class="btn red" type="button" id="red"></div>
@@ -21,9 +25,17 @@
             <div class="btn green" type="button" id="green"></div>
             <div class="btn blue" type="button" id="blue"></div>
         </div>
-    </div>
-    <!-- <h3 clsss="score">Your high score : </h3> -->
 
+    </div>
+    <h3 clsss="highscore">Your high score : 0 </h3>
+    <p><a href="https://youtu.be/EWJ5uYwQJGU?si=Y0b1aJwT_X0dNQyG">Click to learn how to play this game</a></p>
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/vLi1qnRmpe4?si=9-Q2u2DMWVcQPvL6"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </div>
     <script src="app.js"></script>
 </body>
 
