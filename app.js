@@ -5,17 +5,24 @@ let btns = ["red", "yellow", "green", "blue"];
 
 let started = false;
 let level = 0;
+let highScore = 0;
 
 let h2 = document.querySelector("h2");
+let h3 = document.querySelector("h3");
 
-document.addEventListener("keypress", function () {
+let button = document.querySelector("button");
+
+document.addEventListener("keypress", gameStarted);
+button.addEventListener("click", gameStarted)
+
+function gameStarted() {
     if (started == false) {
         console.log("Game Started");
         started = true;
         levelUp();
     }
 
-});
+}
 
 function gameFlash(btn) {
     btn.classList.add("flash");
@@ -49,12 +56,18 @@ function checkAns(idx) {
     if (userSeq[idx] == gameSeq[idx]) {
         if (userSeq.length == gameSeq.length) {
             setTimeout(levelUp, 1000);
+            if (level > highScore) {
+                highScore = level;
+                setTimeout(() => {
+                h3.textContent = `Your high score : ${highScore + 1}`;
+                }, 1000);
+            }
         }
     } else {
         h2.innerHTML = `Game Over! Your score was <b>${level}</b> <br> Press any key to restart the game`;
         document.querySelector("body").style.backgroundColor = "red";
         setTimeout(function () {
-            document.querySelector("body").style.backgroundColor = "white";
+            document.querySelector("body").style.backgroundColor = "#e0ff4f";
         }, 200);
         reset();
     }
