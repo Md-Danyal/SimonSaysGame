@@ -1,16 +1,41 @@
+:root{
+  --primary-color: #e0ff4f;
+  --secondary-color: #00272b;
+}
+
+.dark{
+  --primary-color: #00272b;
+  --secondary-color: #e0ff4f;
+}
+
 body {
   font-family: "Emblema One", system-ui;
-  background-color: #e0ff4f;
-  color: #00272b;
-  /* background: linear-gradient(
-    to bottom right,
-    grey,
-    rgb(203, 203, 62),
-    rgb(185, 218, 185)
-  ); */
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   text-align: center;
   background-size: cover;
   cursor:default;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+nav h1 {
+  margin: 0;
+  text-align: center;
+}
+
+nav img {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+  top: 10px;
 }
 
 .btn {
@@ -36,8 +61,8 @@ body {
 .start{
   font-family: "Emblema One", system-ui;
   /* border:#00272b; */
-  background-color: #00272b;
-  color: #e0ff4f;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
   border-radius: 225%;
   font-size: 20px;
   cursor: pointer;
