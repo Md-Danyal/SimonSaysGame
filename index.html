@@ -7,17 +7,91 @@
     <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
     <title>Symon Says Game</title>
     <link rel="stylesheet" href="style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Emblema+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
 <body>
+    <audio id="bg-music" autoplay loop src="assets/Bg.mp3" type="audio"> </audio>
     <nav>
-    <h1>Simon says game</h1>
-    <img src="assets/moon.png" id="icon">
+        <h1>Simon says game</h1>
+        <button class="settings" onclick="toggleMenu()"><i class="fa-solid fa-gear"></i></button>
+        <div id="menu">
+            <a href="" class="option">
+                <i class="fa-solid fa-gamepad"></i>
+                Restart</a>
+            <a href="#" class="option" onclick="toggleMenu()">
+                <i class="fa-solid fa-play"></i>
+                Continue</a>
+            <a href="#" class="option instructions" onclick="toggleSubMenu()">
+                <i class="fa-solid fa-book-open"></i>
+                Instructions
+                <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <a href="#" class="option" onclick="toggleSoundMenu()">
+                <i class="fa-solid fa-music"></i>
+                Sounds
+                <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <div id="sounds">
+                <i id="volume-icon" class="fas fa-volume-up"></i>
+                <div class="slider-wrapper">
+                    <progress id="volume-progress" max="100" value="50"></progress>
+                    <input type="range" id="volume-slider" min="0" max="100" value="50">
+                </div>
+                <span id="volume-value">50%</span>
+            </div>
+            <div id="icon" class="option">
+                <i class="fa-solid fa-moon"></i>
+                Dark Mode
+                <i class="fa-solid fa-toggle-off"></i>
+            </div>
+            <a href="https://md-danyal.netlify.app/" class="option">
+                <i class="fa-solid fa-circle-info"></i>
+                About developer</a>
+        </div>
     </nav>
-    <h2>Press any keyboard key or "Start" below to start the game.</h2>
+
+    <div id="sub-menu" class="s-menu">
+        <h1 class="inst"><i class="fa-solid fa-gamepad"></i> How to Play Simon Says Game</h1>
+
+        <h2 class="inst">Objective</h2>
+        <p class="tips">Follow the pattern of lights and sounds for as long as possible. Each round, the game adds a new
+            step to the sequence. Your goal is to repeat the sequence correctly without making a mistake!</p>
+
+        <h2 class="inst">Instructions</h2>
+        <ol>
+            <li class="inst-li"><strong>Start the Game:</strong> Click on the "Start" button to begin. The game will
+                light up a button and play a sound, indicating the first step of the sequence.</li>
+            <li class="inst-li"><strong>Memorize the Sequence:</strong> Pay close attention to the order in which the
+                buttons light up. Each round, a new step is added to the sequence, so you must remember the full pattern
+                from previous rounds.</li>
+            <li class="inst-li"><strong>Repeat the Pattern:</strong> Click the buttons in the exact same order as shown.
+                If you match the sequence correctly, the game will add another step to the pattern.</li>
+            <li class="inst-li"><strong>Continue Playing:</strong> The sequence keeps getting longer with each correct
+                round. If you press the wrong button, the game ends, and you have to restart.</li>
+        </ol>
+
+        <h2 class="inst">Tips for Success</h2>
+        <p class="tips2"><i class="fa-solid fa-square-check"></i> Focus on the pattern carefully.<br>
+            <i class="fa-solid fa-square-check"></i> Use sound cues to help memorize the order.<br>
+            <i class="fa-solid fa-square-check"></i> Try repeating the pattern in your mind before clicking.
+        </p>
+
+        <p class="tips3">How long can you keep up? Test your memory and challenge yourself to beat your highest score!
+            <i class="fa-solid fa-rocket"></i>
+        </p>
+        <a href="#" class="option instructions" onclick="toggleSubMenu()">
+            Exit... <i class="fa-solid fa-right-from-bracket"></i>
+        </a>
+    </div>
+
+
+    <h2 id="game-text">Press any keyboard key or "Start" below to start the game.</h2>
     <button class="start">Start</button>
     <div class="btn-container">
         <div class="line-one">
@@ -30,7 +104,7 @@
         </div>
 
     </div>
-    <h3 clsss="highscore">Your high score : 0 </h3>
+    <h3 clsss="highscore">Your high score <i class="fa-solid fa-trophy"></i> : 0 </h3>
     <p><a href="https://youtu.be/EWJ5uYwQJGU?si=Y0b1aJwT_X0dNQyG">Click to learn how to play this game</a></p>
     <div class="video-container">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/vLi1qnRmpe4?si=9-Q2u2DMWVcQPvL6"
