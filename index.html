@@ -20,7 +20,7 @@
     <nav>
         <h1>Simon says game</h1>
         <button class="settings" onclick="toggleMenu()"><i class="fa-solid fa-gear"></i></button>
-        <div id="menu">
+        <div id="menu" onpointerleave="toggleMenu()">
             <a href="" class="option">
                 <i class="fa-solid fa-gamepad"></i>
                 Restart</a>
@@ -56,37 +56,63 @@
         </div>
     </nav>
 
-    <div id="sub-menu" class="s-menu">
-        <h1 class="inst"><i class="fa-solid fa-gamepad"></i> How to Play Simon Says Game</h1>
+    <div id="sub-menu" class="s-menu" onclick="toggleSubMenu()">
+        <h1 class="inst"><i class="fa-solid fa-gamepad"></i>
+            How to Play Simon Says Game
+            <i class="fa-solid fa-circle-xmark"></i>
+        </h1>
 
         <h2 class="inst">Objective</h2>
         <p class="tips">Follow the pattern of lights and sounds for as long as possible. Each round, the game adds a new
-            step to the sequence. Your goal is to repeat the sequence correctly without making a mistake!</p>
+            step to the sequence. Your goal is to repeat the sequence correctly without making a mistake!
+        </p>
 
         <h2 class="inst">Instructions</h2>
-        <ol>
-            <li class="inst-li"><strong>Start the Game:</strong> Click on the "Start" button to begin. The game will
-                light up a button and play a sound, indicating the first step of the sequence.</li>
-            <li class="inst-li"><strong>Memorize the Sequence:</strong> Pay close attention to the order in which the
+        <ul>
+            <li class="inst-li">
+                <div>Start the Game:</div>
+                Click on the "Start" button to begin. The game will
+                light up a button and play a sound, indicating the first step of the sequence.
+            </li>
+            <hr>
+            <li class="inst-li">
+                <div>Memorize the Sequence:</div>
+                Pay close attention to the order in which the
                 buttons light up. Each round, a new step is added to the sequence, so you must remember the full pattern
-                from previous rounds.</li>
-            <li class="inst-li"><strong>Repeat the Pattern:</strong> Click the buttons in the exact same order as shown.
-                If you match the sequence correctly, the game will add another step to the pattern.</li>
-            <li class="inst-li"><strong>Continue Playing:</strong> The sequence keeps getting longer with each correct
-                round. If you press the wrong button, the game ends, and you have to restart.</li>
-        </ol>
+                from previous rounds.
+            </li>
+            <hr>
+            <li class="inst-li">
+                <div>Repeat the Pattern:</div>
+                 Click the buttons in the exact same order as shown.
+                If you match the sequence correctly, the game will add another step to the pattern.
+            </li>
+            <hr>
+            <li class="inst-li">
+                <div>Continue Playing:</div>
+                 The sequence keeps getting longer with each correct
+                round. If you press the wrong button, the game ends, and you have to restart.
+            </li>
+            <hr>
+        </ul>
 
         <h2 class="inst">Tips for Success</h2>
-        <p class="tips2"><i class="fa-solid fa-square-check"></i> Focus on the pattern carefully.<br>
-            <i class="fa-solid fa-square-check"></i> Use sound cues to help memorize the order.<br>
-            <i class="fa-solid fa-square-check"></i> Try repeating the pattern in your mind before clicking.
+        <p class="tips2">
+            <i class="fa-solid fa-square-check"></i>
+            Focus on the pattern carefully.<br>
+            <i class="fa-solid fa-square-check"></i>
+            Use sound cues to help memorize the order.<br>
+            <i class="fa-solid fa-square-check"></i>
+            Try repeating the pattern in your mind before clicking.
         </p>
 
-        <p class="tips3">How long can you keep up? Test your memory and challenge yourself to beat your highest score!
+        <p class="tips3">
+            How long can you keep up? Test your memory and challenge yourself to beat your highest score!
             <i class="fa-solid fa-rocket"></i>
         </p>
-        <a href="#" class="option instructions" onclick="toggleSubMenu()">
-            Exit... <i class="fa-solid fa-right-from-bracket"></i>
+        <a href="#" class="option instructions">
+            Exit...
+            <i class="fa-solid fa-right-from-bracket"></i>
         </a>
     </div>
 
