@@ -5,7 +5,7 @@ let btns = ["red", "yellow", "green", "blue"];
 
 let started = false;
 let level = 0;
-let highScore = 0;
+let highScore = localStorage.getItem("highScore") ? parseInt(localStorage.getItem("highScore")) : 0;
 
 let h2 = document.getElementById("game-text");
 let h3 = document.querySelector("h3");
@@ -106,12 +106,7 @@ function checkAns(idx) {
     if (userSeq[idx] == gameSeq[idx]) {
         if (userSeq.length == gameSeq.length) {
             setTimeout(levelUp, 1000);
-            if (level > highScore) {
-                highScore = level;
-                setTimeout(() => {
-                    h3.innerHTML = `Your high score <i class="fa-solid fa-trophy"></i>: ${highScore + 1}`;
-                }, 1000);
-            }
+            updateHighScore();
         }
     } else {
         h2.innerHTML = `Game Over! Your score was <b>${level}</b> <br> Press any key to restart the game`;
@@ -225,3 +220,15 @@ slider.oninput = function () {
         volumeIcon.className = "fas fa-volume-up";
     }
 };
+
+// Function to update high score
+function updateHighScore() {
+    if (level > highScore) {
+        highScore = level;
+        localStorage.setItem("highScore", highScore);
+
+        setTimeout(() => {
+            h3.innerHTML = `Your high score <i class="fa-solid fa-trophy"></i>: ${highScore}`;
+        }, 1000);
+    }
+}
