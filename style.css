@@ -163,6 +163,7 @@ nav h1 {
   background-color: var(--primary-color);
   color: var(--secondary-color);
   width: 90%;
+  max-width: 1000px;
   padding: 5px;
   border-radius: 7mm;
   margin: 15px;
