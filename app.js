@@ -54,7 +54,7 @@ function playEnd() {
 
 
 document.addEventListener("keydown", gameStarted);
-document.addEventListener("touchstart", gameStarted);
+// document.addEventListener("touchstart", gameStarted);
 button.addEventListener("click", gameStarted);
 button.addEventListener("click", () => {
     playAudio();
