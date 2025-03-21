@@ -18,7 +18,7 @@ function updateText() {
     let textElement = document.getElementById("game-text");
     console.log("Updating text...");
     if (window.innerWidth <= 800) {
-        h2.textContent = "Tap the screen or 'Start' below to begin.";
+        h2.textContent = "Click 'Start' below to begin.";
     } else {
         textElement.textContent = "Press any keyboard key or 'Start' below to start the game.";
     }
@@ -54,7 +54,6 @@ function playEnd() {
 
 
 document.addEventListener("keydown", gameStarted);
-// document.addEventListener("touchstart", gameStarted);
 button.addEventListener("click", gameStarted);
 button.addEventListener("click", () => {
     playAudio();
