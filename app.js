@@ -7,6 +7,10 @@ let started = false;
 let level = 0;
 let highScore = localStorage.getItem("highScore") ? parseInt(localStorage.getItem("highScore")) : 0;
 
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector("h3").innerHTML = `Your high score <i class="fa-solid fa-trophy"></i>: ${highScore}`;
+});
+
 let h2 = document.getElementById("game-text");
 let h3 = document.querySelector("h3");
 
