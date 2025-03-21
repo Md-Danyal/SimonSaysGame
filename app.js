@@ -181,7 +181,7 @@ function toggleMenu() {
 function toggleSubMenu() {
     var subMenu = document.getElementById("sub-menu");
     if (subMenu.style.display === "none" || subMenu.style.display === "") {
-        subMenu.style.display = "block";
+        subMenu.style.display = "flex";
     } else {
         subMenu.style.display = "none";
     }
